@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f6f2">
+    <title>My Tasks | To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <p class="eyebrow">A LITTLE PROGRESS, EVERY DAY</p>
+        <h1>My tasks<span>.</span></h1>
+        <p class="intro">Make a plan. Take the next step.</p>
+      </header>
+
+      <form id="form" class="task-form">
+        <label for="text">Add a task</label>
+        <div class="input-row">
+          <input id="text" name="text" type="text" placeholder="What needs doing?" autocomplete="off" maxlength="160" required>
+          <button class="add-button" type="submit">Add task <span aria-hidden="true">+</span></button>
+        </div>
+      </form>
+
+      <section class="task-section" aria-label="Your tasks">
+        <div class="task-toolbar">
+          <p id="count" class="count" aria-live="polite">0 tasks left</p>
+          <div class="filters" aria-label="Filter tasks">
+            <button type="button" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-filter="active" aria-pressed="false">Active</button>
+            <button type="button" data-filter="done" aria-pressed="false">Done</button>
+          </div>
+        </div>
+
+        <ul id="list" class="task-list" aria-label="Tasks"></ul>
+
+        <div class="list-footer">
+          <span>Small steps count.</span>
+          <button id="clear-completed" class="clear-button" type="button">Clear completed</button>
+        </div>
+      </section>
+
+      <footer>
+        <p>One thing at a time.</p>
+      </footer>
+    </main>
+  </body>
+</html>
